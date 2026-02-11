@@ -25,6 +25,38 @@ To resolve this, I refactored the scraper to use **Symfony Panther**.
 
 ---
 
+
+**
+
+---
+
+## 📸 Screenshots & Video
+
+### 1. The Dynamic Frontend Gallery
+
+*Responsive Grid Layout with TailwindCSS & Livewire Sort.*
+
+
+
+https://github.com/user-attachments/assets/2cf844bc-880a-4e2f-b15a-257fed011223
+
+
+### 2. Filament Admin Panel
+
+
+https://github.com/user-attachments/assets/8c439b10-e077-4b2b-95fe-3641b88fd2b6
+
+
+### 3. Scraper Execution, and other executions
+<img width="1920" height="1008" alt="Screenshot 2026-02-11 193856" src="https://github.com/user-attachments/assets/e1d650bb-8cf7-4f2a-92bd-bbfc28c588b3" />
+<img width="1920" height="1008" alt="Screenshot 2026-02-11 193841" src="https://github.com/user-attachments/assets/f7556c49-7afa-4230-bf27-172202488206" />
+<img width="1920" height="1008" alt="Screenshot 2026-02-11 194021" src="https://github.com/user-attachments/assets/f3399195-8720-4e70-89db-cc07f2e6c57c" />
+<img width="1920" height="1008" alt="Screenshot 2026-02-11 201357" src="https://github.com/user-attachments/assets/9ddee488-b490-4124-8847-dc31050ddcf2" />
+
+
+
+---
+
 ## ✅ Completed Requirements
 
 ### 1. Crawler Implementation
@@ -300,37 +332,9 @@ If the Queue Worker is not processing jobs or you want instant feedback during d
 * **Testing:** Expand the `ProductGalleryTest` to include Browser Tests (Dusk) that verify the sorting dropdown physically reorders elements on the screen.
 * **Performance:** Cache the external images locally to prevent broken links if the source website goes down.
 
-To make this a true "Senior-Level" submission that stands out to Toptal reviewers, you should add three final sections: **System Architecture**, **Screenshots**, and **Author Info**.
-
-Reviewers often skim code but *always* look at diagrams and screenshots first.
-
-Here is the final part to append to your `README.md`.
 
 ---
 
-
-**
-
----
-
-## 📸 Screenshots & Video
-
-### 1. The Dynamic Frontend Gallery
-
-*Responsive Grid Layout with TailwindCSS & Livewire Sort.*
-*(Add your screenshot here: `docs/frontend.png`)*
-
-### 2. Filament Admin Panel
-
-*Management Interface with High-Res Image Previews.*
-*(Add your screenshot here: `docs/admin.png`)*
-
-### 3. Scraper Execution
-
-*Terminal output showing Headless Chrome (Panther) in action.*
-*(Add your screenshot here: `docs/terminal.png`)*
-
----
 
 ## 👨‍💻 Author
 
