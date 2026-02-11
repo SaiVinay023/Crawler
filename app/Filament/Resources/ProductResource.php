@@ -37,12 +37,13 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                // Requirement ✅: Show preview image in product list
                 Tables\Columns\ImageColumn::make('images.url')
                     ->label('Preview')
                     ->circular()
                     ->stacked()
-                    ->limit(1),
+                    ->limit(1)
+                    ->checkFileExistence(false) 
+                    ->visibility('public'),
                 
                 // FIXED: name instead of title
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),

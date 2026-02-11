@@ -33,6 +33,7 @@ class ProcessProductImport implements ShouldQueue
             // 2. Handle the Image relationship (Product has many Images)
             if (!empty($this->productData['image_url'])) {
                 $product->images()->updateOrCreate(
+                    ['url' => $this->productData['image_url']],
                     ['url' => $this->productData['image_url']]
                 );
             }

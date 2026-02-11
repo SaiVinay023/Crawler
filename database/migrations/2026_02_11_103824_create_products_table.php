@@ -15,7 +15,6 @@ return new class extends Migration
         $table->id();
         $table->string('name'); 
         $table->decimal('price', 10, 2)->default(0);
-        $table->string('image_url')->nullable();
         $table->string('source_url')->nullable();
         $table->string('category')->nullable();
         $table->json('attributes')->nullable(); // Store description here
