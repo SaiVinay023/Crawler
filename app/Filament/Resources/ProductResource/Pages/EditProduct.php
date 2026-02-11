@@ -16,4 +16,9 @@ class EditProduct extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+    // This forces Filament to go back to the table after clicking 'Save'
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

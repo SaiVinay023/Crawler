@@ -10,7 +10,7 @@ class Product extends Model
     protected $fillable = [
         'name', 
         'price', 
-        'source_url', // The product page link
+        'source_url',
         'category', 
         'attributes'
     ];
