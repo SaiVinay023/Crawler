@@ -26,10 +26,14 @@
                 <div class="group relative bg-white border border-slate-200 rounded-2xl flex flex-col overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                     <div class="aspect-w-4 aspect-h-3 bg-slate-100 group-hover:opacity-90 sm:h-56 relative">
                         @php
-                            $displayImage = $product->image_url;
-                            if ($displayImage && !str_starts_with($displayImage, 'http')) {
-                                $displayImage = 'https://sandbox.oxylabs.io' . (str_starts_with($displayImage, '/') ? '' : '/') . $displayImage;
-                            }
+                        // FIX: Access the relationship 'images', get the first one, and grab its 'url'
+                        $firstImage = $product->images->first(); 
+                        $displayImage = $firstImage ? $firstImage->url : null;
+
+                        // Normalize URL (Safety check)
+                        if ($displayImage && !str_starts_with($displayImage, 'http')) {
+                        $displayImage = 'https://sandbox.oxylabs.io' . (str_starts_with($displayImage, '/') ? '' : '/') . $displayImage;
+                        }
                         @endphp
                         <img src="{{ $displayImage ?? 'https://via.placeholder.com/400x300?text=No+Image' }}" 
                              alt="{{ $product->name }}" 
